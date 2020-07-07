@@ -1,16 +1,9 @@
 # creamsicle
 
-An inclusive and body-positive character creation tool that also doubles as a dress-up game for the more casual players, but allows for a great amount of character information to be stored (Character name, race, zodiac sign, birthday, etc)
+An inclusive and body-positive character creation tool that also doubles as a dress-up game for the more casual players, but allows for a great amount of character information to be stored (Character name, race, zodiac sign, birthday, etc). A very ambitious app that should have a wide varieties of body shapes and even skin conditions for the ability to allow every user to feel represented.
 
-## Getting Started
+Planned Features: 
+tba, working on a concise list for now.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Planned Platforms:
+android and web (can be released on IOS after testing).
