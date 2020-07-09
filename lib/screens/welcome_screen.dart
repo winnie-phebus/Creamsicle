@@ -32,46 +32,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      bottomNavigationBar: BottomAppBar(
-        color: Theme.of(context).primaryColor,
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            FlatButton(
-              child: Icon(
-                Icons.close,
-                color: Colors.white,
-              ),
-              onPressed: () {
-                print("exit pressed");
-              },
-            ),
-            FlatButton(
-              child: Text(
-                "REVIEW",
-                style: kBottomAppBarTextStyle,
-              ),
-              //child: Icon(Icons.rate_review),
-              onPressed: () {
-                print("review pressed");
-              },
-            ),
-            FlatButton(
-              child: Text(
-                "FOLLOW",
-                style: kBottomAppBarTextStyle,
-              ),
-              onPressed: () {
-                print("follow pressed");
-              },
-            ),
-          ],
-        ),
-        clipBehavior: Clip.none,
-        notchMargin: 3.0,
-        shape: CircularNotchedRectangle(),
-      ),
       body: Center(
         child: Column(
           // Column is also a layout widget. It takes a list of children and
@@ -88,8 +48,47 @@ class _HomeScreenState extends State<HomeScreen> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Divider(
+              thickness: 3,
+              color: Colors.white,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                alignment: Alignment.bottomLeft,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    RaisedButton(
+                      child: Text(
+                        "CONTINUE",
+                        style: kTextStyleToWhite,
+                      ),
+                      color: Theme.of(context).primaryColor,
+                      shape: kRoundedRectangleButtonShape,
+                      onPressed: () {
+                        print("continue Character pressed");
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text(
+                        "NEW CHARACTER",
+                        style: kTextStyleToWhite,
+                      ),
+                      color: Theme.of(context).primaryColor,
+                      shape: kRoundedRectangleButtonShape,
+                      onPressed: () {
+                        print("new Character pressed");
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
@@ -100,6 +99,45 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         tooltip: 'Open Settings',
         child: Icon(Icons.settings),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+/*            FlatButton(
+              child: Icon(
+                Icons.close,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                print("exit pressed");
+              },
+            ),*/
+            FlatButton(
+              child: Text(
+                "REVIEW",
+                style: kBottomAppBarTextStyle,
+              ),
+              //child: Icon(Icons.rate_review),
+              onPressed: () {
+                print("review pressed");
+              },
+            ),
+            FlatButton(
+              child: Text(
+                "SUPPORT",
+                style: kBottomAppBarTextStyle,
+              ),
+              onPressed: () {
+                print("follow pressed");
+              },
+            ),
+          ],
+        ),
+        clipBehavior: Clip.none,
+        notchMargin: 4.5,
+        shape: CircularNotchedRectangle(),
       ),
     );
   }
