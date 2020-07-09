@@ -1,4 +1,9 @@
+import 'package:creamsicle/constants.dart';
 import 'package:flutter/material.dart';
+
+/// This screen is the landing page for the app, and is where the user can
+/// trigger the tutorial, or tell the app what character they intend to edit -
+/// the previous or a new one.
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key, this.title}) : super(key: key);
@@ -19,36 +24,55 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
+  openSettings(context) {
+    Navigator.pushNamed(context, '/settings');
   }
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      bottomNavigationBar: BottomAppBar(
+        color: Theme.of(context).primaryColor,
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            FlatButton(
+              child: Icon(
+                Icons.close,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                print("exit pressed");
+              },
+            ),
+            FlatButton(
+              child: Text(
+                "REVIEW",
+                style: kBottomAppBarTextStyle,
+              ),
+              //child: Icon(Icons.rate_review),
+              onPressed: () {
+                print("review pressed");
+              },
+            ),
+            FlatButton(
+              child: Text(
+                "FOLLOW",
+                style: kBottomAppBarTextStyle,
+              ),
+              onPressed: () {
+                print("follow pressed");
+              },
+            ),
+          ],
+        ),
+        clipBehavior: Clip.none,
+        notchMargin: 3.0,
+        shape: CircularNotchedRectangle(),
       ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
         child: Column(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
@@ -65,22 +89,18 @@ class _HomeScreenState extends State<HomeScreen> {
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+          children: <Widget>[],
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+        onPressed: () {
+          print('settings button clicked');
+          Navigator.pushNamed(context, "/settings");
+        },
+        tooltip: 'Open Settings',
+        child: Icon(Icons.settings),
+      ),
     );
   }
 }
