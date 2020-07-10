@@ -1,4 +1,5 @@
 import 'package:creamsicle/constants.dart';
+import 'package:creamsicle/screens/loading_screen.dart';
 import 'package:creamsicle/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:creamsicle/screens/welcome_screen.dart';
@@ -11,12 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'CreamSlices',
       theme: kOrangeThemeData,
       initialRoute: HomeScreen.id,
       routes: {
-        HomeScreen.id: (context) => HomeScreen(title: 'Flutter Demo Home Page'),
+        HomeScreen.id: (context) => HomeScreen(),
         SettingsScreen.id: (context) => SettingsScreen(),
+        LoadingScreen.id: (context) => LoadingScreen(),
       },
     );
   }

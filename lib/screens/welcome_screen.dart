@@ -9,7 +9,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatefulWidget {
   static String id = 'homescreen';
-  HomeScreen({Key key, this.title}) : super(key: key);
+  HomeScreen({Key key}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -19,8 +19,6 @@ class HomeScreen extends StatefulWidget {
   // case the title) provided by the parent (in this case the App widget) and
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
-
-  final String title;
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -52,8 +50,15 @@ class _HomeScreenState extends State<HomeScreen> {
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          //crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
+            Text(
+              'SUNNIE CHAVEZ',
+              style: TextStyle(
+                color: Theme.of(context).primaryColor,
+                fontSize: 30.0,
+              ),
+            ),
             Stack(
               children: <Widget>[
                 Padding(
@@ -77,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   child: SvgPicture.asset(
                     'images/Wavy_Bob.svg',
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
                 /*Column(
