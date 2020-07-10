@@ -2,6 +2,7 @@ import 'package:creamsicle/constants.dart';
 import 'package:flutter/material.dart';
 
 class SettingsScreen extends StatefulWidget {
+  static String id = 'settings_screen';
   @override
   _SettingsScreen createState() => _SettingsScreen();
 }

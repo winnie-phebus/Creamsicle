@@ -10,7 +10,7 @@ ThemeData kOrangeThemeData = ThemeData(
   primarySwatch: Colors.deepOrange,
   dividerColor: Colors.white,
   visualDensity: VisualDensity.adaptivePlatformDensity,
-  bottomAppBarColor: Colors.deepOrange,
+  bottomAppBarColor: Colors.white, // decide between deep Orange + white
 );
 
 // TODO: compare orange on white to white on orange

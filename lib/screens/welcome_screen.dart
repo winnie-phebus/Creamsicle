@@ -1,4 +1,5 @@
 import 'package:creamsicle/constants.dart';
+import 'package:creamsicle/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 
 /// This screen is the landing page for the app, and is where the user can
@@ -6,6 +7,7 @@ import 'package:flutter/material.dart';
 /// the previous or a new one.
 
 class HomeScreen extends StatefulWidget {
+  static String id = 'homescreen';
   HomeScreen({Key key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -95,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print('settings button clicked');
-          Navigator.pushNamed(context, "/settings");
+          Navigator.pushNamed(context, SettingsScreen.id);
         },
         tooltip: 'Open Settings',
         child: Icon(Icons.settings),

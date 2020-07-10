@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: kOrangeThemeData,
-      initialRoute: "/",
+      initialRoute: HomeScreen.id,
       routes: {
-        "/": (context) => HomeScreen(title: 'Flutter Demo Home Page'),
-        "/settings": (context) => SettingsScreen(),
+        HomeScreen.id: (context) => HomeScreen(title: 'Flutter Demo Home Page'),
+        SettingsScreen.id: (context) => SettingsScreen(),
       },
     );
   }
