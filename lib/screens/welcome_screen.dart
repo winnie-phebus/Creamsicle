@@ -1,6 +1,7 @@
 import 'package:creamsicle/constants.dart';
 import 'package:creamsicle/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 /// This screen is the landing page for the app, and is where the user can
 /// trigger the tutorial, or tell the app what character they intend to edit -
@@ -53,6 +54,46 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            Stack(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0),
+                  child: SvgPicture.asset(
+                    'images/Body.svg',
+                    color: kSkinToneRusset,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30.0, left: 65.0),
+                  child: SvgPicture.asset(
+                    'images/Human_Ears.svg',
+                    color: kSkinToneRusset,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 47.0,
+                    top: 0.0,
+                  ),
+                  child: SvgPicture.asset(
+                    'images/Wavy_Bob.svg',
+                    color: Colors.white,
+                  ),
+                ),
+                /*Column(
+                  children: <Widget>[
+                    Expanded(
+                      //flex: 1,
+                      child: SvgPicture.asset('images/Wavy_Bob.svg'),
+                    ),
+                    Expanded(
+                      //flex: 4,
+                      child: SvgPicture.asset('images/Flower_Dress.svg'),
+                    ),
+                  ],
+                ),*/
+              ],
+            ),
             Divider(
               thickness: 3,
               color: Colors.white,

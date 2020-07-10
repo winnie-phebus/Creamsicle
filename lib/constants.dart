@@ -25,3 +25,6 @@ const kTextStyleToWhite = TextStyle(
 var kRoundedRectangleButtonShape = RoundedRectangleBorder(
   borderRadius: BorderRadius.circular(30.0),
 );
+
+// TEMP: will be replaced later on
+const kSkinToneRusset = Color(0xFF8D5524);
