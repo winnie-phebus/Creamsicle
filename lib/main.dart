@@ -24,6 +24,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// TODO: add LoadingScreen to Route Map
-// TODO: add SettingsScreen to Route Map
 // TODO: create the rest of the screens in Docs.
