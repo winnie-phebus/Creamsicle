@@ -45,3 +45,8 @@ class Info {
 class CharacterPart {
   Color skincolor;
 }
+
+class Feature {
+  // used to identify what visual component should be summoned
+  String description;
+}
