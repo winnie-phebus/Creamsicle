@@ -15,11 +15,14 @@ class Character {
   Body _body;
   Outfit _clothes;
 
-  Character() {}
-
   // sets the sex of the given character
   void setSex(Sex given) {
     this.bodyType = given;
+  }
+
+  static Character randomize() {
+    // TODO: add all the randomize
+    return Character();
   }
 }
 
@@ -27,11 +30,19 @@ class Character {
 class Head {
   Hair bangs;
   Hair behind;
+
+  static Head randomize() {
+    return Head();
+  }
 }
 
 class Hair {}
 
-class Body {}
+class Body {
+  static Body randomize() {
+    return Body();
+  }
+}
 
 class Outfit {}
 
@@ -46,7 +57,7 @@ class CharacterPart {
   Color skincolor;
 }
 
-class Feature {
+abstract class Feature {
   // used to identify what visual component should be summoned
   String description;
 }
