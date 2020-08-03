@@ -72,10 +72,6 @@ class Mouth extends FacialFeature {
 }
 
 class Body {
-  static Body randomize() {
-    return Body();
-  }
-
   Body();
 }
 
