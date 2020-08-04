@@ -1,4 +1,9 @@
 import 'package:creamsicle/constants.dart';
+import 'package:creamsicle/screens/character_body.dart';
+import 'package:creamsicle/screens/character_face.dart';
+import 'package:creamsicle/screens/character_outfit.dart';
+import 'package:creamsicle/screens/character_overview.dart';
+import 'package:creamsicle/screens/character_stats.dart';
 import 'package:creamsicle/screens/loading_screen.dart';
 import 'package:creamsicle/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,9 +24,12 @@ class MyApp extends StatelessWidget {
         HomeScreen.id: (context) => HomeScreen(),
         SettingsScreen.id: (context) => SettingsScreen(),
         LoadingScreen.id: (context) => LoadingScreen(),
+        OverviewScreen.id: (context) => OverviewScreen(),
+        OutfitScreen.id: (context) => OutfitScreen(),
+        BodyScreen.id: (context) => BodyScreen(),
+        FaceScreen.id: (context) => FaceScreen(),
+        StatsScreen.id: (context) => StatsScreen(),
       },
     );
   }
 }
-
-// TODO: create the rest of the screens in Docs.

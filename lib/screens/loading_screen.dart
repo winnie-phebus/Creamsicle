@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// TODO: goes through the body parts and compiles everything into lists
+// TODO: makes the lists and then provides that information to the Controller
 class LoadingScreen extends StatefulWidget {
   static String id = 'loadingscreen';
   LoadingScreen({Key key}) : super(key: key);

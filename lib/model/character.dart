@@ -82,10 +82,20 @@ class Outfit {
 class Info {
   int age;
   String birthday;
+  String height;
   Zodiac sign;
   String bio;
 
-  Info(this.age, this.birthday, this.sign, this.bio);
+  Info(this.age, this.birthday, this.height, this.sign, this.bio);
+
+  static String heightConverter(int feet, int inches) {
+    return "$feet'$inches";
+  }
+
+  static String heightConverterCm(double cm) {
+    //TODO: figure out Conversion from cm to feet + inches
+    return heightConverter(10, 6);
+  }
 }
 
 class BodyPart {

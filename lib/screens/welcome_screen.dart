@@ -1,4 +1,5 @@
 import 'package:creamsicle/constants.dart';
+import 'package:creamsicle/screens/character_overview.dart';
 import 'package:creamsicle/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -119,6 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       shape: kRoundedRectangleButtonShape,
                       onPressed: () {
                         print("continue Character pressed");
+                        Navigator.pushNamed(context, OverviewScreen.id);
                       },
                     ),
                     RaisedButton(
