@@ -33,7 +33,13 @@ enum FaceShape { diamond, heart, round, oval, square, oblong }
 /// Helps tell the View where each component is in the stack.
 ///
 /// In order, [lowest] is for the way back of a Character and holds things like
-/// wings or tails. Then, [below] is for the back-hair, [mid] is for skin & like
-/// body parts, [above] is for the facial features and [high] is for bangs.
+/// wings or tails. [midBelow] is an option. Then, [below] is for the back-hair,
+/// [mid] is for skin & like body parts, [above] is for the facial features,
+/// [midAbove] is for the eyelashes and select other items and [high] is for bangs.
 /// Clothing may also be on this structure, or may have their own.
-enum Layer { lowest, below, mid, above, high }
+enum Layer { lowest, midBelow, below, mid, above, midAbove, high }
+
+/// Represents how open a Feature is
+/// For example eyes can be [closed] for blinking, [semi] for certain
+/// expressions, and [open] which is straight-forward.
+enum State { closed, semi, open }

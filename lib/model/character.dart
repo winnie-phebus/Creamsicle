@@ -59,8 +59,31 @@ class Brows extends FacialFeature {
   Brows(description) : super(description, Expression.neutral);
 }
 
-class Eyes extends FacialFeature {
+class Eyes extends FacialFeature with Blinkable {
+  Lash lashes;
+
   Eyes(description) : super(description, Expression.neutral);
+
+  @override
+  void switchState() {
+    super.switchState();
+    lashes.switchState();
+  }
+}
+
+mixin Blinkable {
+  State current = State.open;
+  bool openState = true;
+
+  void switchState() {
+    this.current = (this.openState) ? State.closed : State.open;
+    this.openState = !this.openState;
+  }
+}
+
+class Lash extends Feature with Blinkable {
+  Lash(String description, Layer stackLayer)
+      : super(description, Layer.midAbove);
 }
 
 class Nose extends Feature {
@@ -73,6 +96,10 @@ class Mouth extends FacialFeature {
 
 class Body {
   Body();
+}
+
+class Neck {
+  Neck();
 }
 
 class Outfit {
