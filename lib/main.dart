@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         HomeScreen.id: (context) => HomeScreen(),
         SettingsScreen.id: (context) => SettingsScreen(),
         LoadingScreen.id: (context) => LoadingScreen(),
-        OverviewScreen.id: (context) => OverviewScreen(),
+        OverviewScreen.id: (context) => OverviewScreen.empty(),
         OutfitScreen.id: (context) => OutfitScreen(),
         BodyScreen.id: (context) => BodyScreen(),
         FaceScreen.id: (context) => FaceScreen(),

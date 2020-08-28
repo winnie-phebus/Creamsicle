@@ -95,10 +95,11 @@ class Mouth extends FacialFeature {
 }
 
 class Body {
+  Neck neck;
   Body();
 }
 
-class Neck {
+class Neck extends BodyPart {
   Neck();
 }
 
