@@ -17,6 +17,9 @@ class Character {
   Body body;
   Outfit clothes;
 
+  // Constructor without values
+  Character.empty();
+
   // Constructor
   Character(this.name, this.bodyType, this.charInfo, this.head, this.body,
       this.clothes);

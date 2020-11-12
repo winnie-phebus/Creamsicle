@@ -1,6 +1,8 @@
 import 'package:creamsicle/constants.dart';
+import 'package:creamsicle/model/character.dart';
 import 'package:creamsicle/screens/character_overview.dart';
 import 'package:creamsicle/screens/settings_screen.dart';
+import 'package:creamsicle/view/character_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -30,6 +32,8 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.pushNamed(context, '/settings');
   }
 
+  CharacterBuilder cb = CharacterBuilder(new Character.empty());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +52,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Stack(
               children: <Widget>[
-                Padding(
+                cb.characterHead(),
+                /*               Padding(
                   padding: const EdgeInsets.only(top: 10.0),
                   child: SvgPicture.asset(
                     'images/Body.svg',
@@ -72,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.black,
                   ),
                 ),
-                /*Column(
+                */ /*Column(
                   children: <Widget>[
                     Expanded(
                       //flex: 1,

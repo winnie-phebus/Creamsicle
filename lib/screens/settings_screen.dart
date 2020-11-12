@@ -22,6 +22,13 @@ class _SettingsScreen extends State<SettingsScreen> {
           ),
         ),
       ),
+      body: ListView(
+        children: <Widget>[
+          Container(
+            child: Text("Theme Things"),
+          ),
+        ],
+      ),
     );
   }
 }
